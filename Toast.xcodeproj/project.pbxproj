@@ -13,6 +13,7 @@
 		9C391D201ED0C132000130BB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C391D1E1ED0C132000130BB /* Main.storyboard */; };
 		9C391D221ED0C132000130BB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9C391D211ED0C132000130BB /* Assets.xcassets */; };
 		9C391D251ED0C132000130BB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C391D231ED0C132000130BB /* LaunchScreen.storyboard */; };
+		9C391D2F1ED0C1E1000130BB /* UIView+Toast.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C391D2E1ED0C1E1000130BB /* UIView+Toast.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,8 @@
 		9C391D211ED0C132000130BB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9C391D241ED0C132000130BB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9C391D261ED0C132000130BB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9C391D2D1ED0C1E1000130BB /* UIView+Toast.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIView+Toast.h"; path = "Categories/UIView+Toast.h"; sourceTree = "<group>"; };
+		9C391D2E1ED0C1E1000130BB /* UIView+Toast.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIView+Toast.m"; path = "Categories/UIView+Toast.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,14 +61,11 @@
 		9C391D141ED0C132000130BB /* Toast */ = {
 			isa = PBXGroup;
 			children = (
-				9C391D181ED0C132000130BB /* AppDelegate.h */,
-				9C391D191ED0C132000130BB /* AppDelegate.m */,
-				9C391D1B1ED0C132000130BB /* ViewController.h */,
-				9C391D1C1ED0C132000130BB /* ViewController.m */,
-				9C391D1E1ED0C132000130BB /* Main.storyboard */,
+				9C391D321ED0C217000130BB /* Root */,
+				9C391D311ED0C1F5000130BB /* User Interface */,
+				9C391D301ED0C1E6000130BB /* Controllers */,
+				9C391D2C1ED0C18E000130BB /* Categories */,
 				9C391D211ED0C132000130BB /* Assets.xcassets */,
-				9C391D231ED0C132000130BB /* LaunchScreen.storyboard */,
-				9C391D261ED0C132000130BB /* Info.plist */,
 				9C391D151ED0C132000130BB /* Supporting Files */,
 			);
 			path = Toast;
@@ -74,9 +74,46 @@
 		9C391D151ED0C132000130BB /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				9C391D261ED0C132000130BB /* Info.plist */,
 				9C391D161ED0C132000130BB /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		9C391D2C1ED0C18E000130BB /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				9C391D2D1ED0C1E1000130BB /* UIView+Toast.h */,
+				9C391D2E1ED0C1E1000130BB /* UIView+Toast.m */,
+			);
+			name = Categories;
+			sourceTree = "<group>";
+		};
+		9C391D301ED0C1E6000130BB /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				9C391D1B1ED0C132000130BB /* ViewController.h */,
+				9C391D1C1ED0C132000130BB /* ViewController.m */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		9C391D311ED0C1F5000130BB /* User Interface */ = {
+			isa = PBXGroup;
+			children = (
+				9C391D1E1ED0C132000130BB /* Main.storyboard */,
+				9C391D231ED0C132000130BB /* LaunchScreen.storyboard */,
+			);
+			name = "User Interface";
+			sourceTree = "<group>";
+		};
+		9C391D321ED0C217000130BB /* Root */ = {
+			isa = PBXGroup;
+			children = (
+				9C391D181ED0C132000130BB /* AppDelegate.h */,
+				9C391D191ED0C132000130BB /* AppDelegate.m */,
+			);
+			name = Root;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -151,6 +188,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9C391D2F1ED0C1E1000130BB /* UIView+Toast.m in Sources */,
 				9C391D1D1ED0C132000130BB /* ViewController.m in Sources */,
 				9C391D1A1ED0C132000130BB /* AppDelegate.m in Sources */,
 				9C391D171ED0C132000130BB /* main.m in Sources */,

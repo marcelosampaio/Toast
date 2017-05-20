@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "UIView+Toast.h"
 
 @interface ViewController ()
 
@@ -14,15 +15,38 @@
 
 @implementation ViewController
 
+
+
+#pragma mark - View Life Cycle
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+
+}
+
+#pragma mark - UI Actions
+- (IBAction)showButton:(id)sender {
+    // toast
+    [self toast];
 }
 
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+#pragma mark - Toast Helper
+-(void)toast{
+    
+    [self.view makeToast:@"This is a piece of toast with a title & image"
+                duration:3.0
+                position:[NSValue valueWithCGPoint:CGPointMake(self.view.frame.size.width/2, self.view.frame.size.height/2)]
+                   title:@"Toast Title"
+                   image:[UIImage imageNamed:@"toastImage"]
+                   style:nil
+              completion:^(BOOL didTap) {
+                  if (didTap) {
+                      NSLog(@"completion from tap");
+                  } else {
+                      NSLog(@"completion without tap");
+                  }
+              }];
+    
 }
 
 
