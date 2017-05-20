@@ -29,6 +29,13 @@
     [self toast];
 }
 
+- (IBAction)activityButton:(id)sender {
+    // activity
+    [self showActivity];
+    
+}
+
+
 
 #pragma mark - Toast Helper
 -(void)toast{
@@ -47,6 +54,17 @@
                   }
               }];
     
+}
+
+
+-(void)showActivity{
+    // display toast with an activity spinner
+    [self.view makeToastActivity:CSToastPositionCenter];
+    [self performSelector:@selector(hideActivity) withObject:nil afterDelay:3.5f];
+}
+
+-(void) hideActivity{
+    [self.view hideToastActivity];
 }
 
 

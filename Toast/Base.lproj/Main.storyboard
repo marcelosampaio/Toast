@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -22,22 +23,34 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="232-eS-KYs">
-                                <rect key="frame" x="166" y="318" width="42" height="30"/>
+                                <rect key="frame" x="101" y="292" width="173" height="30"/>
                                 <state key="normal" title="Toast!"/>
                                 <connections>
                                     <action selector="showButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="YJ6-yi-n6S"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xex-Pb-kH9">
+                                <rect key="frame" x="101" y="345" width="173" height="30"/>
+                                <state key="normal" title="Activity"/>
+                                <connections>
+                                    <action selector="activityButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="BeA-1W-Myn"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="232-eS-KYs" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="ZG4-NY-MPz"/>
-                            <constraint firstItem="232-eS-KYs" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="h1J-ER-p2G"/>
+                            <constraint firstItem="232-eS-KYs" firstAttribute="trailing" secondItem="Xex-Pb-kH9" secondAttribute="trailing" id="9Gv-td-dU5"/>
+                            <constraint firstItem="232-eS-KYs" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="272" id="KRf-i7-Z7q"/>
+                            <constraint firstItem="232-eS-KYs" firstAttribute="leading" secondItem="Xex-Pb-kH9" secondAttribute="leading" id="MBQ-wk-SHf"/>
+                            <constraint firstItem="Xex-Pb-kH9" firstAttribute="top" secondItem="232-eS-KYs" secondAttribute="bottom" constant="23" id="aQu-1Y-GkC"/>
+                            <constraint firstItem="232-eS-KYs" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="85" id="kIB-xr-fei"/>
+                            <constraint firstItem="232-eS-KYs" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="yPH-eK-grk"/>
                         </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="138.98050974512745"/>
         </scene>
     </scenes>
 </document>
