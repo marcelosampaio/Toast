@@ -48,12 +48,10 @@
     // toast corner radius
     style.cornerRadius = 20;
     
-    // imageView corner radius
+    // imageView corner radius and border
     style.imageCornerRadius = 40;
-    
-    
-//    style.borderColor = [UIColor whiteColor].CGColor;
-//    style.borderWidth = 1.8f;
+    style.borderColor = [UIColor whiteColor].CGColor;
+    style.borderWidth = 0.8f;
     
     [self.view makeToast:@"This is a piece of toast with a title & image. hjash ashggashj ajhgashgh jashgashjg ajhasghjsg kjahjgashjas jhgahsjhjsadhj jhgasdhgas jhasdghjdas jhgd ajhsadgjh jashgdhgjhads jhgahsjhjsadhj jhgasdhgas jhasdghjdas jhgd ajhsadgjh jashgdhgjhads jhgahsjhjsadhj jhgasdhgas jhasdghjdas jhgd ajhsadgjh jashgdhgjhads FIM"
                 duration:3.0
