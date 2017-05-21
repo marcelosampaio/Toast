@@ -223,8 +223,20 @@ static const NSString * CSToastQueueKey             = @"CSToastQueueKey";
     
     if(image != nil) {
         imageView = [[UIImageView alloc] initWithImage:image];
-        imageView.contentMode = UIViewContentModeScaleAspectFit;
+        // marcelo
+//        imageView.contentMode = UIViewContentModeScaleAspectFit;
+        imageView.contentMode = UIViewContentModeScaleToFill;
+        // fim marcelo
+        
+        
         imageView.frame = CGRectMake(style.horizontalPadding, style.verticalPadding, style.imageSize.width, style.imageSize.height);
+        
+        // marcelo
+        imageView.layer.cornerRadius = 8;
+        imageView.layer.masksToBounds = YES;
+        imageView.layer.borderColor = [UIColor whiteColor].CGColor;
+        imageView.layer.borderWidth = 1.2f;
+        // fim marcelo
     }
     
     CGRect imageRect = CGRectZero;

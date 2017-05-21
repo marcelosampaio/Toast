@@ -40,15 +40,19 @@
 #pragma mark - Toast Helper
 -(void)toast{
     
-    [self.view makeToast:@"This is a piece of toast with a title & image"
+    CSToastStyle *style = [[CSToastStyle alloc]initWithDefaultStyle];
+    style.imageSize = CGSizeMake(80.0, 280.0);
+    
+    [self.view makeToast:@"This is a piece of toast with a title & image. This is a piece of toast with a title & image. This is a piece of toast with a title & image. This is a piece of toast with a title & image. This is a piece of toast with a title & image. This is a piece of toast with a title & image. This is a piece of toast with a title & image. FIM"
                 duration:3.0
                 position:[NSValue valueWithCGPoint:CGPointMake(self.view.frame.size.width/2, self.view.frame.size.height/2)]
                    title:@"Toast Title"
                    image:[UIImage imageNamed:@"toastImage"]
-                   style:nil
+                   style:style
               completion:^(BOOL didTap) {
                   if (didTap) {
                       NSLog(@"completion from tap");
+                      [self toast];
                   } else {
                       NSLog(@"completion without tap");
                   }
