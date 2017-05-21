@@ -308,6 +308,32 @@ extern const NSString * CSToastPositionBottom;
  */
 @property (assign, nonatomic) CGSize imageSize;
 
+
+////////
+/**
+ The imageView contentMode. The default is `UIViewContentModeScaleAspectFit`.
+ */
+@property (assign, nonatomic) UIViewContentMode *contentMode;
+
+/**
+ The imageView borderColor.
+ */
+@property (assign, nonatomic) CGColorRef borderColor;
+
+
+/**
+ The imageView borderWidth.
+ */
+@property (assign, nonatomic) CGFloat borderWidth;
+
+////////
+
+
+
+
+
+
+
 /**
  The size of the toast activity view when `makeToastActivity:` is called.
  Default is `CGSizeMake(100.0, 100.0)`.

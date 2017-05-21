@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import "UIView+Toast.h"
+#import <UIKit/UIKit.h>
 
 @interface ViewController ()
 
@@ -42,8 +43,12 @@
     
     CSToastStyle *style = [[CSToastStyle alloc]initWithDefaultStyle];
     style.imageSize = CGSizeMake(80.0, 280.0);
+    style.contentMode = UIViewContentModeScaleToFill;
+    style.cornerRadius = 8;
+    style.borderColor = [UIColor whiteColor].CGColor;
+    style.borderWidth = 1.8f;
     
-    [self.view makeToast:@"This is a piece of toast with a title & image. This is a piece of toast with a title & image. This is a piece of toast with a title & image. This is a piece of toast with a title & image. This is a piece of toast with a title & image. This is a piece of toast with a title & image. This is a piece of toast with a title & image. FIM"
+    [self.view makeToast:@"This is a piece of toast with a title & image. This is a piece of toast with a title & image. This is a piece of toast with a title & image. This is a piece of toast with a title & image. This is a piece of toast with a title & image. This is a piece of toast with a title & image. This is a piece of toast with a title & image. Jashjhsh haggafsjjhsss. O mundo dos negócios é aqui! FIM"
                 duration:3.0
                 position:[NSValue valueWithCGPoint:CGPointMake(self.view.frame.size.width/2, self.view.frame.size.height/2)]
                    title:@"Toast Title"

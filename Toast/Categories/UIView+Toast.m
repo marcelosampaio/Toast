@@ -224,7 +224,11 @@ static const NSString * CSToastQueueKey             = @"CSToastQueueKey";
     if(image != nil) {
         imageView = [[UIImageView alloc] initWithImage:image];
         // marcelo
-//        imageView.contentMode = UIViewContentModeScaleAspectFit;
+        imageView.contentMode = UIViewContentModeScaleAspectFit;
+        if (style.contentMode != nil) {
+            imageView.contentMode = *(style.contentMode);
+        }
+        
         imageView.contentMode = UIViewContentModeScaleToFill;
         // fim marcelo
         
@@ -232,10 +236,17 @@ static const NSString * CSToastQueueKey             = @"CSToastQueueKey";
         imageView.frame = CGRectMake(style.horizontalPadding, style.verticalPadding, style.imageSize.width, style.imageSize.height);
         
         // marcelo
-        imageView.layer.cornerRadius = 8;
+        imageView.layer.cornerRadius = style.cornerRadius;
         imageView.layer.masksToBounds = YES;
-        imageView.layer.borderColor = [UIColor whiteColor].CGColor;
-        imageView.layer.borderWidth = 1.2f;
+        
+        if (style.borderColor != nil) {
+            imageView.layer.borderColor = style.borderColor;
+        }
+        
+        imageView.layer.borderWidth = 0.0f;
+        if (style.borderWidth > 0.00f) {
+            imageView.layer.borderWidth = style.borderWidth;
+        }
         // fim marcelo
     }
     
