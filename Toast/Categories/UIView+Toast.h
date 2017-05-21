@@ -243,7 +243,7 @@ extern const NSString * CSToastPositionBottom;
 @property (assign, nonatomic) CGFloat verticalPadding;
 
 /**
- The corner radius. Default is 10.0.
+ The Toast corner radius. Default is 10.0.
  */
 @property (assign, nonatomic) CGFloat cornerRadius;
 
@@ -310,6 +310,9 @@ extern const NSString * CSToastPositionBottom;
 
 
 ////////
+
+
+@property (assign, nonatomic) CGFloat imageCornerRadius;
 /**
  The imageView contentMode. The default is `UIViewContentModeScaleAspectFit`.
  */

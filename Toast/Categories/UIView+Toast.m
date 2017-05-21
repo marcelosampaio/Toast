@@ -236,7 +236,7 @@ static const NSString * CSToastQueueKey             = @"CSToastQueueKey";
         imageView.frame = CGRectMake(style.horizontalPadding, style.verticalPadding, style.imageSize.width, style.imageSize.height);
         
         // marcelo
-        imageView.layer.cornerRadius = style.cornerRadius;
+        imageView.layer.cornerRadius = style.imageCornerRadius;
         imageView.layer.masksToBounds = YES;
         
         if (style.borderColor != nil) {

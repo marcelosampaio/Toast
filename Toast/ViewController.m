@@ -43,12 +43,18 @@
     
     CSToastStyle *style = [[CSToastStyle alloc]initWithDefaultStyle];
     style.imageSize = CGSizeMake(80.0, 280.0);
-    style.contentMode = UIViewContentModeScaleToFill;
+//    style.contentMode = UIViewContentModeScaleToFill;
+    // toast corner radius
     style.cornerRadius = 8;
+    
+    // imageView corner radius
+    style.imageCornerRadius = 40;
+    
+    
     style.borderColor = [UIColor whiteColor].CGColor;
     style.borderWidth = 1.8f;
     
-    [self.view makeToast:@"This is a piece of toast with a title & image. This is a piece of toast with a title & image. This is a piece of toast with a title & image. This is a piece of toast with a title & image. This is a piece of toast with a title & image. This is a piece of toast with a title & image. This is a piece of toast with a title & image. Jashjhsh haggafsjjhsss. O mundo dos negócios é aqui! FIM"
+    [self.view makeToast:@"This is a piece of toast with a title & image. hjash ashggashj ajhgashgh jashgashjg ajhasghjsg kjahjgashjas jhgahsjhjsadhj jhgasdhgas jhasdghjdas jhgd ajhsadgjh jashgdhgjhads jhgahsjhjsadhj jhgasdhgas jhasdghjdas jhgd ajhsadgjh jashgdhgjhads jhgahsjhjsadhj jhgasdhgas jhasdghjdas jhgd ajhsadgjh jashgdhgjhads FIM"
                 duration:3.0
                 position:[NSValue valueWithCGPoint:CGPointMake(self.view.frame.size.width/2, self.view.frame.size.height/2)]
                    title:@"Toast Title"
