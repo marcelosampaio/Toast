@@ -316,7 +316,7 @@ extern const NSString * CSToastPositionBottom;
 /**
  The imageView contentMode. The default is `UIViewContentModeScaleAspectFit`.
  */
-@property (assign, nonatomic) UIViewContentMode *contentMode;
+@property (assign, nonatomic) NSInteger *contentMode;
 
 /**
  The imageView borderColor.
